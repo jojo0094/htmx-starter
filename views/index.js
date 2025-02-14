@@ -1,4 +1,4 @@
-const createHomepageTemplate = () => /*html*/ `
+const createHomepageTemplate = () => /*html*/`
   <!DOCTYPE html>
   <html>
     <head>
@@ -13,17 +13,30 @@ const createHomepageTemplate = () => /*html*/ `
 
       <main>
         <div class="book-list">
-          <!-- book list here later -->
-          <button hx-get='/books' hx-target='.book-list'>Show books</button>
+          <button hx-get="/books" hx-target=".book-list">Show Books</button>
         </div>
 
         <div class="add-book-form">
           <h2>What do you want to read?</h2>
-          <!-- form template here later -->
+          <form>
+            <input 
+              id="title" 
+              name="title"
+              placeholder="title" 
+              type="text" 
+            />
+            <input 
+              id="author" 
+              name="author"
+              placeholder="author" 
+              type="text" 
+            />
+            <button hx-post="/books" hx-target=".book-list ul" hx-swap="beforeend">Add</button>
+          </form>
         </div>
       </main>
     </body>
   </html>
 `;
-	
+
 export default createHomepageTemplate;

@@ -2,7 +2,7 @@ import express from 'express';
 import createHomepageTemplate from './views/index.js';
 import createListTemplate from './views/list.js';
 import BOOKS_DATA from './data/data.js';
-//import createBookTemplate from './views/book.js';
+import createBookTemplate from './views/book.js';
 
 // create app
 const app = express();
